@@ -1,4 +1,4 @@
-# Implementação do trabalho de LAB de Desenvolvimento
+# Implementação do trabalho de LAB de Desenvolvimento de Software
 
 Nosso trabalho não fora completado, ficando pendente a integração entre o servidor JAVA e o front-end. Assim, as implementações atuais usam chamadas diretas ao JSON-server, que "hospeda" o Active Directory e o DataBase.
 
