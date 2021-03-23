@@ -1,0 +1,27 @@
+{
+  "aluno": [
+    { "matricula": 1, "senha": "1234"},
+    { "matricula": 2, "senha": "1234"},
+    { "matricula": 3, "senha": "1234"},
+    { "matricula": 4, "senha": "1234"},
+    { "matricula": 5, "senha": "1234"},
+    { "matricula": 6, "senha": "1234"},
+    { "matricula": 7, "senha": "1234"},
+    { "matricula": 8, "senha": "1234"},
+    { "matricula": 9, "senha": "1234"},
+    { "matricula": 10, "senha": "1234"}
+    
+  ],
+  "professor": [
+    { "matricula": 51, "senha": "1234"},
+    { "matricula": 52, "senha": "1234"},
+    { "matricula": 53, "senha": "1234"},
+    { "matricula": 54, "senha": "1234"},
+    { "matricula": 55, "senha": "1234"},
+    { "matricula": 56, "senha": "1234"},
+    { "matricula": 57, "senha": "1234"},
+    { "matricula": 58, "senha": "1234"},
+    { "matricula": 59, "senha": "1234"},
+    { "matricula": 510, "senha": "1234"}
+  ]
+}
