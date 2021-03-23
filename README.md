@@ -24,7 +24,7 @@ json-server --watch DB/db.json --port 3002
 ```
 Para dar inici ao ActiveDirectory Fake:
 ```shell
-json-server --watch DB/db.json --port 3004
+json-server --watch ActiveDirectory/db.json --port 3004
 ```
 Para dar inicio ao Client do pacote Matricula:
 ```shell
