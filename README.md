@@ -1,4 +1,5 @@
 #Descrição do Sistema:
+
 O sistema só pode ser utilizado após cadastro prévio.
 
 Os usuários individuais (clientes) podem introduzir, modificar, consultar e cancelar pedidos de aluguel. Por outro lado, os agentes (empresas e bancos) podem modificar e avaliar pedidos.
