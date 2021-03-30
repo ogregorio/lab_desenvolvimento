@@ -1,41 +1,18 @@
-# Implementação do trabalho de LAB de Desenvolvimento de Software
+#Descrição do Sistema:
+O sistema só pode ser utilizado após cadastro prévio.
 
-Nosso trabalho não fora completado, ficando pendente a integração entre o servidor JAVA e o front-end. Assim, as implementações atuais usam chamadas diretas ao JSON-server, que "hospeda" o Active Directory e o DataBase.
+Os usuários individuais (clientes) podem introduzir, modificar, consultar e cancelar pedidos de aluguel. Por outro lado, os agentes (empresas e bancos) podem modificar e avaliar pedidos.
 
-Assim implementamos:
-- Uma simulação de Active Directory básica
-- Uma simulação de Banco de Dados básica
-- Uma interface de login aluno/professor básica para acesso ao controle de disciplinas
-- Uma interface de login aluno/professor para acesso ao sistema de cobranças
-- Backend em Java
+Após introdução no sistema, os pedidos são analisados do ponto de vista financeiro pelos agentes e, em caso de parecer positivo, são colocados à sua consideração para execução do contrato.
 
-O que não implementamos:
-- Integração backend java e client ReactJS
+Sobre os contratantes do aluguel, armazenam-se os dados de identificação (RG, CPF, Nome, Endereço), profissão, as entidades empregadoras e os respectivos rendimentos auferidos (máximo 3).
 
-Execução atual:
-Dependências node 14, npm
-```shell
-cd projeto/
-npm install -g json-server
-```
-Para dar inicio ao DataBase Fake:
-```shell
-json-server --watch DB/db.json --port 3002
-```
-Para dar inici ao ActiveDirectory Fake:
-```shell
-json-server --watch ActiveDirectory/db.json --port 3004
-```
-Para dar inicio ao Client do pacote Matricula:
-```shell
-cd Matricula/client/matricula/
-npm install && npm start
-```
-Agora o login poderá ser iniciado a partir de: http://localhost:3000/login
+Dependendo do tipo de contrato, os automóveis alugados podem ser registrados como propriedade dos clientes, empresas ou bancos.
 
-Para dar inicio ao Client do pacote Cobrança:
-```shell
-cd Cobranca/client/cobranca/
-npm install && npm start
-```
-Agora o login poderá ser iniciado a partir de: http://localhost:3001/login
+Sobre os automóveis, o sistema registra a matrícula, ano, marca, modelo e placa.
+
+O aluguel de um automóvel pode estar associado com um contrato de crédito, o qual foi concedido por um dos bancos agentes. 
+
+Em termos do sistema, o servidor central encontra-se ligado aos computadores locais dos clientes e aos diversos agentes aderentes através da Internet.
+
+O sistema pode ser subdividido em dois subsistemas: um para gestão de pedidos e contratos; e outro para a construção dinâmica das páginas web.
