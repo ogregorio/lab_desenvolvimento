@@ -1,4 +1,4 @@
-#Descrição do Sistema:
+# Descrição do Sistema:
 
 O sistema só pode ser utilizado após cadastro prévio.
 
