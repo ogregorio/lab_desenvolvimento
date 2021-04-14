@@ -3,12 +3,14 @@ package com.example.lab.models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Pedidos")
 public class Pedido {
 	
+	@Id
 	private int codigo;
 	private String status;
 	private Date data_inicial;

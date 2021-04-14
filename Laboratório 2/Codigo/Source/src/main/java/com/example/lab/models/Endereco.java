@@ -1,12 +1,14 @@
 package com.example.lab.models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Endereco")
 public class Endereco {
 	
+	@Id
 	private String cep;
 	private String rua;
 	private String estado;

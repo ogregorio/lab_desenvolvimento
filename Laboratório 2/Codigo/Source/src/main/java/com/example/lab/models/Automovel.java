@@ -3,12 +3,15 @@ package com.example.lab.models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "Automoveis")
 public class Automovel {
 	
+	@Id
 	private String matricula;
 	private Date ano;
 	private String marca;

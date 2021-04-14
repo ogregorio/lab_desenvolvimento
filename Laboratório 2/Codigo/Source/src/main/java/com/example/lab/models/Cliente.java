@@ -1,12 +1,14 @@
 package com.example.lab.models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Cliente")
 public class Cliente {
 
+	@Id
 	private String cpf;
 	private String rg;
 	private String nome;
