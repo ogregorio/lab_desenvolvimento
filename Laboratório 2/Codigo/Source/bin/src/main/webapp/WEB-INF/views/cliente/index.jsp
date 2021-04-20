@@ -21,8 +21,8 @@
 			<c:forEach var="cliente" items="$(clientes )">
 			<ul>
 				<li>
-					<span>${clientes.nome}</span>
-					<span>${clientes.cpf}</span>
+					<span>${cliente.nome}</span>
+					<span>${cliente.cpf}</span>
 				</li>
 			</ul>
 			</c:forEach>

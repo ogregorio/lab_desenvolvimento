@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "Cliente")
 public class Cliente {
 
 	@Id
@@ -15,7 +15,7 @@ public class Cliente {
 	private String profissao;
 	private String empregador;
 	private float rendimento;
-	
+
 	public String getCpf() {
 		return cpf;
 	}

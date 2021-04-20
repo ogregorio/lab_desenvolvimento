@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import com.example.lab.models.Cliente;
 import com.example.lab.repositories.ClienteRepository;
 
-@Service
+@Service("clienteService")
 public class ClienteConcrete implements ClienteService{
 
 	@Autowired
@@ -13,26 +13,22 @@ public class ClienteConcrete implements ClienteService{
 	
 	@Override
 	public Iterable<Cliente> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return clienteRepository.findAll();
 	}
 
 	@Override
 	public Cliente find(String cpf) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public Cliente save(Cliente cliente) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void delete(String cpf) {
-		// TODO Auto-generated method stub
-		
+		// void
 	}
 
 }

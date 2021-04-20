@@ -1,30 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1 isELIgnored="false" "%>
+    pageEncoding="ISO-8859-1" isELIgnored="false" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Clientes</title>
 	</head>
 	<body>
-		
+		<div>
 		<h3>Cliente List</h3>
-			<ul>
-				<li>
-					<span>CPF</span>
-					<span>Nome</span>
-				</li>
-			</ul>
-			<c:forEach var="cliente" items="$(clientes )">
-			<ul>
-				<li>
-					<span>${cliente.nome}</span>
-					<span>${cliente.cpf}</span>
-				</li>
-			</ul>
+			<table>	
+				<tr>
+					<th>Nome</th>
+					<th>CPF</th>
+				</tr>
+			<c:forEach var="cliente" items="${clientes}">
+				<tr>
+					<td>${cliente.nome}</td>
+					<td>${cliente.cpf}</td>
+				</tr>	
 			</c:forEach>
+			</table>
+		</div>
+
 	</body>
 </html>

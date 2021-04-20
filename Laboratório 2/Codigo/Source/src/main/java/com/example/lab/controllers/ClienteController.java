@@ -18,8 +18,9 @@ public class ClienteController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap modelMap) {
-		modelMap.put("clientes",clienteService.findAll());
-		return "cliente/index";
+		modelMap.put("clientes", clienteService.findAll());
+		System.out.println(modelMap.getAttribute("clientes"));
+		return "/cliente/index";
 	}
-	
+
 }
