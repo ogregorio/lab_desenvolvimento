@@ -6,20 +6,20 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.lab.services.ClienteService;
+import com.example.lab.services.AutomovelService;
 
 
 @Controller
-@RequestMapping("/clientes")
-public class ClienteController {
+@RequestMapping("/automoveis")
+public class AutomovelController {
 	
 	@Autowired
-	private ClienteService clienteService;
+	private AutomovelService automovelService;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap modelMap) {
-		modelMap.put("clientes", clienteService.findAll());
-		return "/index/clientes";
+		modelMap.put("automoveis", automovelService.findAll());
+		return "/index/automoveis";
 	}
 
 }
