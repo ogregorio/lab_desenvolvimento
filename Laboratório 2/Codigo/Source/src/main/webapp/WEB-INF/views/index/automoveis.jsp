@@ -11,6 +11,11 @@
 	<body>
 		<div>
 		<h3>Automovel List</h3>
+			<div class="menu">
+				<a href="/clientes">Clientes</a>
+				<a href="/automoveis">Automoveis</a>
+				<a href="/pedidos">Pedidos</a>
+			</div>
 			<table>	
 				<tr>
 					<th>Matricula</th>
@@ -68,6 +73,23 @@
 			padding: 3px;
 			text-align: center;
 			color: #7E6C40;
+		}
+		
+		.menu {
+			display: flex;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.menu a {
+			color: #fff;
+			text-decoration: none;
+			margin: 10px;
+		}
+
+		.menu a:hover {
+			text-decoration: underline;
 		}
 
 	</style>

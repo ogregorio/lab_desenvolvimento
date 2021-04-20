@@ -13,8 +13,9 @@ public class Pedido {
 	@Id
 	private int codigo;
 	private String status;
-	private Date data_inicial;
-	private Date data_modificacao;
+	// TODO: ver como implementar no java
+	private String data_inicial;
+	private String data_modificacao;
 	
 	public int getCodigo() {
 		return codigo;
@@ -28,16 +29,16 @@ public class Pedido {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Date getData_inicial() {
-		return data_inicial;
+	public String getData_inicial() {
+		return data_inicial.toString();
 	}
-	public void setData_inicial(Date data_inicial) {
-		this.data_inicial = data_inicial;
+	public void setData_inicial(String data_inicial) {
+		this.data_inicial = data_inicial.toString();
 	}
-	public Date getData_modificacao() {
-		return data_modificacao;
+	public String getData_modificacao() {
+		return data_modificacao.toString();
 	}
-	public void setData_modificacao(Date data_modificacao) {
-		this.data_modificacao = data_modificacao;
+	public void setData_modificacao(String data_modificacao) {
+		this.data_modificacao = data_modificacao.toString();
 	}
 }
