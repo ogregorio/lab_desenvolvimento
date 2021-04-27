@@ -6,11 +6,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>Clientes</title>
+	<title>Pedidos</title>
 	</head>
 	<body>
 		<div>
-		<h3>Cliente List</h3>
+		<h3>Pedido List</h3>
 			<div class="menu">
 				<a href="/clientes">Clientes</a>
 				<a href="/automoveis">Automoveis</a>
@@ -18,23 +18,23 @@
 			</div>
 			<table>	
 				<tr>
-					<th>Nome</th>
-					<th>CPF</th>
-					<th>RG</th>
-					<th>Profissao</th>
-					<th>Empregador</th>
-					<th>Rendimento</th>
-					<th>Pedidos</th>
+					<th>Codigo</th>
+					<th>Status</th>
+					<th>Data Inicial</th>
+					<th>Data Modificacao</th>
+					<th>Matricula Automovel</th>
+					<th>CPF Cliente</th>
+					<th>Codigo Agente</th>
 				</tr>
-			<c:forEach var="cliente" items="${clientes}">
+			<c:forEach var="pedido" items="${pedidos}">
 				<tr>
-					<td>${cliente.nome}</td>
-					<td>${cliente.cpf}</td>
-					<td>${cliente.rg}</td>
-					<td>${cliente.profissao}</td>
-					<td>${cliente.empregador}</td>
-					<td>R$ ${cliente.rendimento}</td>
-					<td><a href="${pageContext.request.contextPath}/pedidos/cliente/${cliente.cpf}" >Ver Pedidos</a></td>
+					<td>${pedido.codigo}</td>
+					<td>${pedido.status}</td>
+					<td>${pedido.data_inicial}</td>
+					<td>${pedido.data_modificacao}</td>
+					<td>${pedido.matricula_automovel}</td>
+					<td>${pedido.cpf_cliente}</td>
+					<td>${pedido.codigo_agente}</td>
 				</tr>	
 			</c:forEach>
 			</table>
@@ -44,7 +44,7 @@
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');		
 		
 		html {
-			background: #7475EB;
+			background: #4C9040;
 			width: 100%;
 			height: 100%;
 			font-family: 'Roboto', sans-serif;
@@ -74,9 +74,8 @@
 			background: #fff;
 			padding: 3px;
 			text-align: center;
-			color: #7475EB;
+			color: #4C9040;
 		}
-
 		
 		.menu {
 			display: flex;
