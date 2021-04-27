@@ -1,5 +1,7 @@
 package com.example.lab.services;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +15,18 @@ public class PedidoConcrete implements PedidoService{
 	private PedidoRepository pedidoRepository;
 
 	@Override
-	public Pedido find(String codigo) {
-		// TODO Auto-generated method stub
+	public Pedido find(String cpf) {
+		Iterable<Pedido> pedidos = pedidoRepository.findAll();
+		for(Pedido pedido : pedidos) {
+			if(cpf.equals(pedido.getCpf_cliente()))
+				return pedido;
+		}
 		return null;
 	}
 
 	@Override
 	public Pedido save(Pedido pedido) {
-		// TODO Auto-generated method stub
-		return null;
+		return pedidoRepository.save(pedido);
 	}
 
 	@Override
@@ -33,6 +38,16 @@ public class PedidoConcrete implements PedidoService{
 	public void delete(String codigo) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public Iterable<Pedido> findByCpf(String cpf) {
+		Iterable<Pedido> pedidos = pedidoRepository.findAll();
+		ArrayList<Pedido> pedidosSerializados = new ArrayList<Pedido>();
+		for(Pedido pedido : pedidos) {
+			if(cpf.equals(pedido.getCpf_cliente()))
+				pedidosSerializados.add(pedido);
+		}
+		return pedidosSerializados;
 	}
 
 }
