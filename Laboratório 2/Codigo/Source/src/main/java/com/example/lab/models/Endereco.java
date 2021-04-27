@@ -12,6 +12,7 @@ public class Endereco {
 	private String cep;
 	private String rua;
 	private String estado;
+	private String pais;
 	private String cpf;
 	
 	public String getCep() {
@@ -37,5 +38,11 @@ public class Endereco {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+	public String getPais() {
+		return pais;
+	}
+	public void setPais(String pais) {
+		this.pais = pais;
 	}
 }

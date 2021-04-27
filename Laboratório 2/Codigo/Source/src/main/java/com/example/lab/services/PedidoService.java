@@ -11,5 +11,7 @@ public interface PedidoService {
 	public Pedido save(Pedido pedido);
 	
 	public void delete(String codigo);
+
+	public Iterable<Pedido> findByCpf(String cpf);
 	
 }

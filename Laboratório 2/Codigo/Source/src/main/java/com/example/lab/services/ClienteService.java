@@ -1,6 +1,9 @@
 package com.example.lab.services;
 
+import java.util.ArrayList;
+
 import com.example.lab.models.Cliente;
+import com.example.lab.models.Pedido;
 
 public interface ClienteService {
 

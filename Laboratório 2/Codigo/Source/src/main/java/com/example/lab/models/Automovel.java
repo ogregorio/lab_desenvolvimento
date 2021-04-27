@@ -15,6 +15,7 @@ public class Automovel {
 	private String matricula;
 	private Date ano;
 	private String marca;
+	private String modelo;
 	private String placa;
 	private String status;
 	private String proprietario;
@@ -54,6 +55,12 @@ public class Automovel {
 	}
 	public void setProprietario(String proprietario) {
 		this.proprietario = proprietario;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
 
 }	

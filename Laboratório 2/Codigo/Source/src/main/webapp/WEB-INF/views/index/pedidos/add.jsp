@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false" %>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="java.util.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -10,28 +11,50 @@
 	</head>
 	<body>
 		<div>
-		<h3>Pedido List</h3>
+		<h3>Add Pedido</h3>
 			<div class="menu">
 				<a href="/clientes">Clientes</a>
 				<a href="/automoveis">Automoveis</a>
 				<a href="/pedidos">Pedidos</a>
 			</div>
-			<table>	
-				<tr>
-					<th>Codigo</th>
-					<th>Status</th>
-					<th>Data Inicial</th>
-					<th>Data Modificacao</th>
-				</tr>
-			<c:forEach var="pedido" items="${pedidos}">
-				<tr>
-					<td>${pedido.codigo}</td>
-					<td>${pedido.status}</td>
-					<td>${pedido.data_inicial}</td>
-					<td>${pedido.data_modificacao}</td>
-				</tr>	
-			</c:forEach>
-			</table>
+			<s:form method="post" modelAttribute="pedido"
+				action="${pageContext.request.contextPath}/pedidos/add">
+				<table>
+					<tr>
+						<td>Codigo</td>
+						<td>
+							<s:input path="codigo"/>
+						</td>
+						<td>Status</td>
+						<td>
+							<s:input path="status"/>
+						</td>
+						<td>Data Inicial</td>
+						<td>
+							<s:input value="<%= (new java.util.Date()).toLocaleString()%>" path="data_inicial"/>
+						</td>
+						<td>Data Modificacao</td>
+						<td>
+							<s:input value="<%= (new java.util.Date()).toLocaleString()%>" path="data_modificacao"/>
+						</td>
+						<td>Codigo Agente</td>
+						<td>
+							<s:input path="codigo_agente"/>
+						</td>
+						<td>Matricula</td>
+						<td>
+							<s:input path="matricula_automovel"/>
+						</td>
+						<td>CPF Cliente</td>
+						<td>
+							<s:input path="cpf_cliente"/>
+						</td>
+						<td>
+							<input type="submit" value="Salvar"/>
+						</td>
+					</tr>
+				</table>
+			</s:form>
 		</div>
 	</body>
 	<style>
@@ -55,6 +78,12 @@
 			margin: auto;
 			padding-bottom: 5%;
 		}
+		
+		tr {
+		    display: flex;
+    		flex-direction: column;
+    		min-width: 500px;
+    	}
 
 		td{
 			border: solid 1px #fff;
